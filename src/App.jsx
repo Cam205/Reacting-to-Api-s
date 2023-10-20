@@ -3,10 +3,6 @@ import Card from './Card';
 import People from './People';
 
 
-
-
-
-
 class App extends Component {
 
     constructor(props) {
@@ -20,12 +16,12 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('https://ghibliapi.herokuapp.com/films')
+        fetch('https://ghibliapi.vercel.app/films')
             .then(res => res.json())
             .then(films => this.setState({ films }))
             .then(() => {
-                fetch('https://ghibliapi.herokuapp.com/people')
-                    .then(peop => peop.json())
+                fetch('https://ghibliapi.vercel.app/people')
+                    .then(people => people.json())
                     .then(people => this.setState({ people }))
             })
 

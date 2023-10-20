@@ -9,7 +9,8 @@ const People = (props) => {
                     <p className="card-text">Name: {props.people.name}</p>
                     <p className="card-text">Age: {props.people.age}</p>
                     <p className="card-text">Gender: {props.people.gender}</p>
-                    <p className="card-text" >{props.people.url}</p>
+                    <p className="card-text">Eye Color: {props.people.eye_color}</p>
+                    <a href={props.people.url} class="card-text">{props.people.url}</a>
                 </div>
             </div>
         </div>
